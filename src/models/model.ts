@@ -6,7 +6,7 @@ interface ITask extends Document {
   releaseYear: Number;
   rating: Number;
   duration: String;
-  genre: String;
+  genre: String[];
   src: String;
   image: String;
   isSlider: boolean;
@@ -40,7 +40,7 @@ const ModelSchema: Schema = new Schema({
     trim: true,
   },
   genre: {
-    type: String,
+    type: [String],
     required: [true, "must provide task genre"],
     trim: true,
   },
